@@ -76,7 +76,12 @@ class multi_class_softmax_regression( Loss ):
         grad_ = grad_ + lambda_*w
         return grad_
     def obj( self, x, y, w, lambda_ ):
-        temp = np.exp( x.dot( w ))
+        print(f"w={w}")
+        print(f"x={x}")
+        xdot = x.dot(w)
+        print(f"xdot={xdot}")
+        temp = np.exp(xdot)
+        print(f"temp={temp}")
         row = range( len( y ))
         col = y.astype(int)
         pick_numerator = temp[ row, col]

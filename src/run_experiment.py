@@ -7,8 +7,8 @@ Created on Fri Mar  1 21:14:55 2019
 
 import svrg_ht
 import sgd_ht
-import hsgd_ht
-import gd_ht
+# import hsgd_ht
+# import gd_ht
 import scsg_ht
 
 import argparse
@@ -16,7 +16,7 @@ import argparse
 parser = argparse.ArgumentParser(description='hardthresholding methods')
 parser.add_argument('--epoch', default=50, type=int, metavar='N', help='number of total epochs to run')
 parser.add_argument('--file_path',default='F:/Users/gul15103/Desktop/E2006.test',  type=str)
-parser.add_argument('--output_folder', default='../logs/mnist', type=str)
+parser.add_argument('--output_folder', default='../logs/', type=str)
 parser.add_argument('--batchsize', default=1, type=int, metavar='N', help='mini-batch size (default: 128),only used for train')
 parser.add_argument('--htk', default=200, type=int)
 parser.add_argument('--B_type', default=1, type=int)

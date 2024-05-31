@@ -79,6 +79,7 @@ def sgd_ht( f, regularizer,epoch, batch_size , stepsize= 10**-5,  stepsize_type 
   print( "The dataset : " + str( f) )
   print( "The number of instances N : " + str( x.shape[0]) )
   print( "The number of features p : " + str( x.shape[1]) )
+  print( "y is: " + str(y.shape[0]))
   print( "The batch size for SGD : " + str( batch_size ) )
   print( "The step size : " + str(  stepsize ) )
   print( "The epoch : " + str(  epoch ) )
@@ -93,6 +94,11 @@ def sgd_ht( f, regularizer,epoch, batch_size , stepsize= 10**-5,  stepsize_type 
   else: 
       w = np.zeros(x.shape[1],)
     
+  print(w)
+  print()
+  print(x)
+  print()
+  print(y)
   # ---------------------------------------------
  
   #store information
@@ -141,6 +147,7 @@ def sgd_ht( f, regularizer,epoch, batch_size , stepsize= 10**-5,  stepsize_type 
       if (t+1) % log_interval == 0:
           #obj_temp = loss.obj( x, y, w, regularizer )/loss.obj( x, y, np.zeros(x.shape[1],), regularizer )
           obj_temp = loss.obj( x, y, w, regularizer )
+          print(f"obj_temp: {obj_temp}")
           #if k>0:
           time_k = time.time()
           #print( 'Epoch: '+ str(k+1) +', data passes : '+ str((k+1))+ ', time :' + str(time_k - t0 ))
