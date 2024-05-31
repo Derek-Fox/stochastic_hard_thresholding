@@ -1,5 +1,7 @@
 # stochastic_hard_thresholding
 
+## Fork of the below code for use during the GraLNA 2024 REU. Please see the original reposistory for their code
+
 Source code for "An Effective Hard Thresholding Method Based on Stochastic Variance Reduction for Nonconvex Sparse Learning".
 
 Please cite us with the following:
